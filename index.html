@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<title> DBLviz - Home </title>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">		
+
+		<link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+		<link rel="stylesheet" type="text/css" href="css/home.css">
+		<link rel="stylesheet" type="text/css" href="css/default.css">
+
+	</head>
+	<body>
+		<!-- Navbar -->
+		<header>
+			<div class="navbar" id="myNavbar">
+				<a href="index.html"> <img src="images/tue.png"></a>
+				<a class="navbar_link active" href="index.html"> Home </a>
+				<a class="navbar_link" href="html/visualize.html"> Visualize </a>
+				<a class="navbar_link" href="html/upload.html"> Upload </a>
+				<a class="navbar_link" href="html/about.html"> About </a>
+			</div>
+		</header>
+
+
+
+		<!-- Tab intro -->
+		<div class="tab_intro"></div>
+
+
+
+		<!-- Tabs visualizations -->
+		<div class="jumbotron bg_black">
+			<h1 class="white"> Sunburst diagram</h1>
+			<div class="slideshow-container">
+			    <div class="mySunbursts fade">
+			        <div class="container">
+			            <div class="content-left">
+        					<p class="text white"> 
+        						The sunburst diagram visualization, also known as the sunburst chart or multi-level pie, shows the hierarchy through a series of rings, which are sliced for each category node. Each ring corresponds to a level in the hierarchy, with the central circle representing the root node and the hierarchy moving outwards from this.        					
+        							<br>
+        							<br>
+        						One can use this visualization to investigate hierarchical structures within the data and also the composition of the data and its subsets. 
+        							<br>
+        							<br>
+        						Are you ready to explore your universe of data?
+        							<br>
+        						<a href="html/visualize.html">
+        							<button class="button btnSun">Visualize here</button>
+        						</a>
+        					</p>
+        				</div>
+        				<div class="content-right">
+
+        					<center><img src="images/sunburst1.png" style="max-height: 350px"></center>
+        				</div>
+			        </div>
+			    </div>
+			    
+				<div class="mySunbursts fade">
+					<div class="container">
+			            <div class="content-left">        					
+        					<img src="images/sunburst2.png" style="max-height: 375px; margin-top: 15px">
+        				</div>
+        				<div class="content-right">
+        					<p class="text white">
+        						The visualization is most useful to illustrate:
+        						<ul class="text white" style="margin-top: -10px
+        						">
+        							<li>Part of a whole; the hierarchical structure and composition of all sets.</li>
+        							<li>Flows; the distribution of sets over time. </li>
+        						</ul>
+        					</p>
+
+        						<img src="images/sunburst3.png" style="width: 300px">
+        					
+        					<p class="text white">
+        						Advantages:
+        						<ol class="text white" style="margin-top: -10px">
+        							<li> Dynamic and interactive </li>
+        							<li> Userfriendly </li>
+        							<li> Modern and structured </li>
+        						</ol>
+							</p>
+        				</div>
+			        </div>
+			    </div>
+			    
+			    <div class="mySunbursts fade">
+			        <div class="container">
+			            <div class="content-left">
+        					<p class="text white"> 
+        						On the right, you can see an example of a dynamic sunburst visualization. A sunburst visualization can be made interactive, which means that users are able to zoom in or enlarge a set such that one can investigate the subsets and their respective size. 
+        							<br>
+        							<br>
+        						We also offer a dynamic and interactive sunburst diagram, where you can zoom in on the inner circles. 
+        							<br>
+        							<br>
+        						Want to try? Go <a href="html/visualize.html" class="text white"> here</a>
+        					</p>
+        				</div>
+        				<div class="content-right" style="padding-left: 50px">
+        					<img src="images/sunburst.gif" style="max-height: 350px">
+        				</div>
+			        </div>
+			    </div>
+			    
+                <center>
+                    <a class="prev prvsun" onclick="addSunburst(-1)">&#10094;</a>
+                    <span class="dotSunburst" onclick="setSunburst(1)"></span> 
+                    <span class="dotSunburst" onclick="setSunburst(2)"></span> 
+                    <span class="dotSunburst" onclick="setSunburst(3)"></span> 
+                    <a class="next nxtsun" onclick="addSunburst(1)">&#10095;</a>
+                </center>
+			</div>
+		</div>
+
+
+
+		<div class="jumbotron bg_white">
+			<h1 class="black"> Circle packing </h1>
+            <div class="slideshow-container">
+			    <div class="myCircles fade">
+			        <div class="container">
+			            <div class="content-left">
+        					<p class="text black"> 
+        						The circle packing visualization, also known as the circular treemap, is a variation of a treemap that uses circles instead of rectangles. This visualization again shows the hierarchy of the data because, the containment within each circle represents a level of this hierarchy. Each branch of the tree is represented as a circle and its sub-branches are represented as circles inside of it.				
+        							<br>
+        							<br>
+        						One can use this visualization to investigate hierarchical structures within the data and also the composition of the data and its subsets. 
+        							<br>
+        							<br>
+        						Are you ready to explore your universe of data?
+        							<br>
+        						<a href="html/visualize.html">
+        							<button class="button btnCir">Visualize here</button>
+        						</a>
+        					</p>
+        				</div>
+        				<div class="content-right" style="padding-left: 50px">
+        					<img src="images/circle1.png" style="max-height: 300px; margin-left: 75px">
+        				</div>
+			        </div>
+			    </div>
+			    
+				<div class="myCircles fade">
+			        <div class="container">
+			            <div class="content-left">
+			            	<img src="images/circle2.png" style="max-height: 350px">        					
+        				</div>
+        				<div class="content-right">
+        					<p class="text black">
+        						The visualization is most useful to illustrate:
+        						<ul class="text black" style="margin-top: -10px
+        						">
+        							<li>The hierarchy of data</li>
+        							<li>The composition and organization of sets</li>
+        						</ul>
+        					</p>
+
+        						<img src="images/circle3.jpg" style="width: 300px">
+        					
+        					<p class="text black">
+        						Advantages:
+        						<ol class="text black" style="margin-top: -10px">
+        							<li> Dynamic and interactive </li>
+        							<li> Userfriendly and structured </li>
+        							<li> Better than a treemap </li>
+        						</ol>
+							</p>
+        				</div>
+			        </div>
+			    </div>
+			    
+			    <div class="myCircles fade">
+			        <div class="container">
+			            <div class="content-left">
+        					<p class="text black">
+        						On the right, you can see an example of a circle packing visualization. A circle packing visualization can be made interactive, which means that users are able to zoom in or enlarge a set; circle, such that one can investigate the subsets and their respective size. The circle packing does this very well and clear.  
+        							<br>
+        							<br>
+        						We also offer a dynamic and interactive circle packing visualization, where you can zoom in on circles with an animated transition. 
+        							<br>
+        							<br>
+        						Want to try? Go <a href="html/visualize.html" class="text black"> here</a>
+        					</p>
+        				</div>
+        				<div class="content-right" style="padding-left: 50px">
+        					<img src="images/circle.gif" style="max-height: 300px">
+        				</div>
+			        </div>
+			    </div>
+			    
+                <center>
+                    <a class="prev prvcircle" onclick="addCircles(-1)">&#10094;</a>
+                    <span class="dotCircles" onclick="setCircles(1)"></span> 
+                    <span class="dotCircles" onclick="setCircles(2)"></span> 
+                    <span class="dotCircles" onclick="setCircles(3)"></span> 
+                    <a class="next nxtcircle" onclick="addCircles(1)">&#10095;</a>
+                </center>
+			</div>
+		</div>
+
+
+
+
+		<div class="jumbotron bg_black">
+			<h1 class="white"> Node link diagram</h1>
+			<div class="slideshow-container">
+			    <div class="myNodes fade">
+			        <div class="container">
+			            <div class="content-left">
+        					<p class="text white"> 
+        						The node link diagram visualization, also known as the network graph or map, is the type of visualization to show the connections between data. Lines, also called edges, connect the nodes on hover, giving an overview of all relations between a group of entities. Additional variables can be used to color the nodes and draw the edges, to give more detailed information about the connections.		
+        							<br>
+        							<br>
+        						One can use this visualization to investigate relations / networks among data. 
+        							<br>
+        							<br>
+        						Are you ready to explore your universe of data?
+        							<br>
+        						<a href="html/visualize.html">
+        							<button class="button btnSun">Visualize here</button>
+        						</a>
+        					</p>
+        				</div>
+        				<div class="content-right">
+
+        					<center><img src="images/node1.png" style="max-height: 350px"></center>
+        				</div>
+			        </div>
+			    </div>
+			    
+				<div class="myNodes fade">
+					<div class="container">
+			            <div class="content-left">        					
+        					<img src="images/node2.png" style="max-height: 375px; margin-top: 15px">
+        				</div>
+        				<div class="content-right">
+        					<p class="text white">
+        						The visualization is most useful to illustrate:
+        						<ul class="text white" style="margin-top: -10px
+        						">
+        							<li>Relations or networks and information about these relations among data</li>
+        							<li>Distribution of relations</li>
+        						</ul>
+        					</p>
+
+        						<img src="images/node3.svg" style="width: 300px">
+        					
+        					<p class="text white">
+        						Advantages:
+        						<ol class="text white" style="margin-top: -10px">
+        							<li> Dynamic and interactive </li>
+        							<li> Userfriendly </li>
+        							<li> Shows relations and its distribution among data </li>   			
+        						</ol>
+							</p>
+        				</div>
+			        </div>
+			    </div>
+			    
+			    <div class="myNodes fade">
+			        <div class="container">
+			            <div class="content-left">
+        					<p class="text white">       						
+        						On the right, you can see an example of a dynamic node link visualization. A node link visualization can be made interactive, which means that users are able to hover and select nodes to show their relations, such that one can investigate those relations and their distribution.
+        							<br>
+        							<br>
+        						We also offer a dynamic and interactive node link diagram, where nodes can be hovered to display its links and also can be moved around by the user.
+        							<br>
+        							<br>
+        						Want to try? Go <a href="html/visualize.html" class="text white"> here</a>
+        					</p>
+        				</div>
+        				<div class="content-right" style="padding-left: 50px">
+        					<img src="images/node.gif" style="max-height: 350px">
+        				</div>
+			        </div>
+			    </div>
+			    
+                <center>
+                    <a class="prev prvsun" onclick="addNodes(-1)">&#10094;</a>
+                    <span class="dotNodes" onclick="setNodes(1)"></span> 
+                    <span class="dotNodes" onclick="setNodes(2)"></span> 
+                    <span class="dotNodes" onclick="setNodes(3)"></span> 
+                    <a class="next nxtsun" onclick="addNodes(1)">&#10095;</a>
+                </center>
+			</div>
+		</div>
+
+
+
+
+
+
+
+		<!-- Footer -->
+		<div class="footer">
+			<p class="text white center">
+				<a href="index.html" class="link white"> Home </a> - 
+				<a href="html/visualize.html" class="link white"> Visualize </a> - 
+				<a href="html/upload.html" class="link white"> Upload </a> - 
+				<a href="html/about.html" class="link white"> About </a>
+					<br>	
+					<br>				
+				Copyright 2021 
+					<br>
+				All rights are reserved
+			</p>
+		</div>
+		<script src="javascript/home.js"></script>
+	</body>
+</html>
+

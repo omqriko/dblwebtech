@@ -1,0 +1,132 @@
+/* Default styling */
+html {height: 100%;}
+body {background-color: #ffffff;}
+
+
+
+/* Tab intro */
+.tab_intro {
+	width: 100%;
+	height: 100%;
+	background-image: url("../images/banner.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.jumbotron {
+	height: 650px;
+	padding: 75px 400px 75px 400px;
+}
+
+
+
+/* Slideshow */
+.mySunbursts, .myCircles, .myNodes {
+    display: none; 
+    height: 400px
+}
+
+.slideshow-container {
+    max-height: 700px;
+    margin: auto;
+    z-index: 1;
+}
+
+.prev, .next {
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.6s ease;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 2px 2px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 2px 0 0 2px;
+}
+
+.prvsun, .nxtsun {color: #ffffff;}
+.prvsun:hover, .nxtsun:hover {background-color: rgba(0,0,0,0.8);}
+.prvcircle, .nxtcircle {color: #282a36;}
+.prvcircle:hover, .nxtcircle:hover {background-color: rgba(0,0,0,0.2);}
+
+.dotSunburst, .dotCircles, .dotNodes {
+    width: 15px;
+    height: 15px;
+    margin: 0 2px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.dotSunburst, .dotNodes {background-color: #ffffff;}
+.dotCircles {background-color: #282a36;}
+
+.active, .dotSunburst:hover, .dotCircles:hover, .dotNodes:hover {
+    color: #267ebd;
+	background-color: #267ebd;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+
+
+/* Slide content */
+.container {width: 100%; margin-top: -25px;}
+.content-left, .content-right {width: 50%;}
+.content-left {float: left;}
+.content-right {float: right;}
+
+.button {
+    padding: 16px 32px;
+    margin: 4px 0 0 0;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.btnSun {
+    margin: 10px 0 0 75px;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #282a36;
+    border: 2px solid #2e98c9;
+    border-radius: 5px;
+}
+
+.btnSun:hover, .btnCir:hover {
+   background-color: #2e98c9; 
+}
+
+.btnCir {
+    margin: 10px 0 0 75px;
+    color: #000000;
+    text-decoration: none;
+    background-color: #ffffff;
+    border: 2px solid #2e98c9;
+    border-radius: 5px;
+}

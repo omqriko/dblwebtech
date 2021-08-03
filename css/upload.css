@@ -1,0 +1,65 @@
+/* Page content */
+.wrapper {
+	width: 100%;
+	padding: 200px 0 300px 0;
+}
+
+.jumbotron {
+	width: 50%;
+	margin: auto;
+}
+
+.jumbotron_sub {padding: 40px;}
+
+.tablink {
+	width: 50%;
+	padding: 14px 16px;
+	background-color: #555;
+	font-size: 17px;
+	color: #ffffff;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.tablink:hover {background-color: #267ebd;}
+
+.tabcontent {
+	height: 100%;
+	padding: 20px 0;
+	display: none;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+/* Form styling */
+.button {
+	width: 25%;
+	padding: 10px 12px;
+	color: white;
+	float: left;
+	display: inline-block;
+	opacity: 0.9;
+	cursor: pointer;
+	outline: none;
+	border: none;
+}
+
+.button:hover {opacity:1;}
+.cancel {background-color: #f44336;}
+.confirm {background-color: green;}
+.standard {
+    background-color: #444;
+    padding: 5px 6px;
+    font-weight:normal;
+    font-size:16px;
+    text-align: center;
+}
+
+
+
+
+

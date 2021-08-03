@@ -1,0 +1,33 @@
+/* Default styling */
+html {height: 100%;}
+body {background-color: #ffffff;}
+
+
+
+/* Page content */
+.parallax {
+	height: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.p1 {background-image: url("../images/parallax1.jpg");}
+
+.p2 {
+	background-image: url("../images/sunburst1.png");
+	background-size: 35%;
+}
+
+.p3 {
+	background-image: url("../images/circle1.png");
+	background-size: 33%;
+}
+
+.p4 {
+	background-image: url("../images/node1.png");
+	background-size: 36%;
+}
+
+.jumbotron {padding: 75px 400px 75px 400px;}

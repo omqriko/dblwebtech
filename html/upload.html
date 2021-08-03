@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<title> DBLviz - Upload </title>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">		
+
+		<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/upload.css">
+		<link rel="stylesheet" type="text/css" href="../css/default.css">
+
+	</head>
+	<body>
+	    
+		<!-- Navbar -->
+		<header>
+			<div class="navbar" id="myNavbar">
+				<a href="../index.html"> <img src="../images/tue.png"></a>
+				<a class="navbar_link" href="../index.html"> Home </a>
+				<a class="navbar_link" href="visualize.html"> Visualize </a>
+				<a class="navbar_link active" href="upload.html"> Upload </a>
+				<a class="navbar_link" href="about.html"> About </a>
+			</div>
+		</header>
+
+
+		<div class="wrapper bg_black">			
+			<div class="jumbotron bg_white">
+					<button class="tablink" id="defaultOpen" onclick="tabSelect('upload', this, 'green')">Upload</button>
+					<button class="tablink" onclick="tabSelect('delete', this, 'red')">Delete</button>
+
+				<div class="jumbotron_sub">
+					<div class="tabcontent" id="upload">
+						<!-- Upload -->			
+						<h1 class="black"> Upload </h1>
+						<hr>
+						<p class="text black" style="margin-top: -10px">
+							Press the upload button to upload your own dataset. This data can be then selected on the visualize page. 
+								<br>
+							Note, only one custom dataset can be used at a time and the file must be .json or .csv file.
+						</p>
+
+						<form action="../php/upload.php" method="POST" encType="multipart/form-data" class="text white">
+						    <label for="uploadForm" class="standard button">Select file</label>
+							<input class="hidden" type="file" id="uploadForm" name="uploadForm" accept=".json, .csv">
+							<br><br>
+							<input class="standard button hidden" id="submit" name="submit" type="submit" value="Submit dataset" onclick="submitButton()">
+							<br>
+						</form>	
+						<p class="text black" id="message">Select a new file to use.</p> 
+					</div>
+				
+
+					<div class="tabcontent" id="delete">					
+						<!-- Delete -->			
+						<h1 class="black"> Delete </h1>
+						<hr>
+						<p class="text black" style="margin-top: -10px">
+							Press the upload button to delete your own uploaded dataset. This data will then be removed from our server.
+								<br>
+							Note, after deleting your custom dataset, you are not able to visualize this data anymore.
+						</p>
+
+						<form action="../php/delete.php" method="POST"> 
+							<input class="standard button" name="delete" type="button" value="Delete dataset" onclick="deleteButton()"><br>
+							<p class="text black hidden" id="warning"></p>
+							<input class="button cancel hidden" name="cancel" id="cancel" type="button" value="Cancel" onclick="cancelButton()">
+							<input class="button confirm hidden" name="confirm" id="confirm" type="submit" value="Confirm">
+						</form>	
+					</div>	
+				</div>		
+			</div>
+		</div>
+
+
+
+		<!-- Footer -->
+		<div class="footer">
+			<p class="text white center">
+				<a href="../index.html" class="link white"> Home </a> - 
+				<a href="visualize.html" class="link white"> Visualize </a> - 
+				<a href="upload.html" class="link white"> Upload </a> - 
+				<a href="about.html" class="link white"> About </a>
+					<br>	
+					<br>				
+				Copyright 2021 
+					<br>
+				All rights are reserved
+			</p>
+		</div>
+
+		<script type="text/javascript" src="../javascript/upload.js"> </script>
+	</body>
+</html>
+

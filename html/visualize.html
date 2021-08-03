@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<title> DBLviz - Home </title>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Default -->
+		<link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+		<link rel="stylesheet" type="text/css" href="../css/visualize.css">
+		<link rel="stylesheet" type="text/css" href="../css/circle.css"> 
+		<link rel="stylesheet" type="text/css" href="../css/default.css">	
+
+	</head>
+	<body>
+		<!-- Navbar -->
+		<header>
+			<div class="navbar" id="myNavbar">
+				<a href="../index.html"> <img src="../images/tue.png"></a>
+				<a class="navbar_link" href="../index.html"> Home </a>
+				<a class="navbar_link active" href="visualize.html"> Visualize </a>
+				<a class="navbar_link" href="upload.html"> Upload </a>
+				<a class="navbar_link" href="about.html"> About </a>
+			</div>
+		</header>
+
+
+		<!-- Settings -->
+		<div class="wrapper bg_black">
+			<div class="jumbotron bg_white">
+				<h1 class="black"> Visualize Settings </h1>
+				<hr>
+
+				<div class="content">
+					<div class="container-left">
+						<p class="text black" style="margin: -10px 0 10px 0">
+							Select which visualization you would like to be loaded by clicking the coherent checkbox. 
+						</p>
+
+						<label class="container black"> 
+							<span class="black"> Sunburst diagram </span>
+							<input type="checkbox" onclick="enableSun()" checked = "checked">
+							<span class="checkmark"></span>
+						</label>
+
+						<label class="container"> 
+							<span class="black"> Circle packing </span>
+							<input type="checkbox" onclick="enableCir()" checked = "checked">
+							<span class="checkmark"></span>
+						</label>
+
+						<label class="container"> 
+							<span class="black"> Node link </span>
+							<input type="checkbox" onclick="enableNod()" checked = "checked">
+							<span class="checkmark"></span>
+						</label>
+
+						<p class="text black" style="margin: 0 0 10px 0">
+								<br>
+							<b>Other settings</b>
+						</p>
+
+						<label class="container"> 
+							<span class="black"> Enable linked visualizations </span>
+							<input type="checkbox" onclick="linking()">
+							<span class="checkmark"></span>
+						</label>
+
+						<label class="container"> 
+							<span class="black"> Enable custom dataset </span>
+							<input type="checkbox" value="../datasets/standard.json" id="select_button" onclick="selectButton()">
+							<span class="checkmark"></span>
+						</label>
+
+						<label class="container"> 
+							<span class="black"> Enable CC mails </span>
+							<input type="checkbox" onclick="ccEmails()">
+							<span class="checkmark"></span>
+						</label>
+						
+						<label class="container"> 
+							<span class="black"> Inverted Hierarchy </span>
+							<input type="checkbox" onclick="invertHierarchy();">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+
+					<div class="container-right">	
+						<p class="text black" style="margin: -10px 0 10px 0">
+							<b> Slider settings </b>
+								<br>
+							Select the time period of the data.
+						</p>
+
+						<div class="container-slider">
+							<div class="slider-track"></div>
+							<input type="range" min="0" max="100" value="0" id="myDateStart" class="sliderDate" oninput="startDateSlider()">
+							<input type="range" min="0" max="100" value="100" id="myDateEnd" class="sliderDate" oninput="endDateSlider()">
+						</div>
+
+						<div class="date_values">
+							<span id="startDate" class="black">
+								0
+							</span>
+							<span id="endDate" class="black">
+								100
+							</span>
+						</div>
+
+						<p class="text black" style="margin: 0 0 10px 0">
+								<br>
+								<br>
+								<br>
+								<br>
+							Select the layer of the data hierarchy.
+						</p>
+
+						<input type="range" min="1" max="4" value="4" id="myLevel" class="sliderLevel" oninput="myLevel()">
+
+						<div class="slider_values">
+							<span id="startLayer" class="black">
+								1
+							</span>
+							<span id="myOutput" class="black" style="margin: 15px 42% 0 46%"> 4 </span> 
+							<span id="endLayer" class="black">
+								4
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- visualizations -->
+			<div class="jumbotron_viz bg_white">
+				<center>
+					<h1 class="black"> Visualizations </h1>
+					<p class="text black" style="margin: -15px 0 15px 0"> 
+						The selected visualizations will be displayed down below. All coherent settings are applied to these visualizations. 
+					</p>
+				</center>
+
+				<hr>
+
+				<div class="grid">
+					<div class="container_sun" id="mySunburst"> 
+						<h1 class="black" style="font-size: 28px;" id="visual1t"> Sunburst diagram </h1>
+						<center><svg width="1100" height="600" id="visual1"></svg></center>
+					</div>
+
+					<div class="container_cir" id="myCircle">
+						<h1 class="black" style="font-size: 28px;" id="visual2t"> Circle packing diagram </h1>
+						<center><svg width="550" height="550" id="visual2"></svg></center>
+					</div>
+
+					<div class="container_nod" id="myNode">
+						<h1 class="black" style="font-size: 28px;" id="visual3t"> Node link diagram </h1>
+						<center><svg width="550" height="550" id="visual3"></svg></center>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<!-- Footer -->
+		<div class="footer">
+			<p class="text white center">
+				<a href="../index.html" class="link white"> Home </a> - 
+				<a href="visualize.html" class="link white"> Visualize </a> - 
+				<a href="upload.html" class="link white"> Upload </a> - 
+				<a href="about.html" class="link white"> About </a>
+					<br>	
+					<br>				
+				Copyright 2021 
+					<br>
+				All rights are reserved
+			</p>
+		</div>
+
+
+
+		<!-- Slider -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/foundation/6.2/foundation.min.js"></script>
+		<script type="text/javascript"> $(document).foundation(); </script>
+
+		<!-- Visualizations -->
+        <script src="https://unpkg.com/d3@6.7.0/dist/d3.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <!-- Loading external viz files -->
+		<script type="text/javascript" src="../javascript/visualization1.js"></script>
+		<script type="text/javascript" src="../javascript/visualize_default.js"></script>
+	</body>
+</html>
+
